@@ -1,8 +1,7 @@
 Vagrant.configure("2") do |config|
-    # Configuración común para todas las máquinas
-    config.vm.box = "ubuntu/focal64" # Usar Ubuntu 20.04 como base
+    config.vm.box = "ubuntu/focal64" 
   
-    # Servidor Apache 1
+    # Apache 1
     config.vm.define "apache1" do |apache1|
       apache1.vm.hostname = "apache1"
       apache1.vm.network "private_network", ip: "192.168.33.11"
@@ -20,7 +19,7 @@ Vagrant.configure("2") do |config|
       SHELL
     end
   
-    # Servidor Apache 2
+    # Apache 2
     config.vm.define "apache2" do |apache2|
       apache2.vm.hostname = "apache2"
       apache2.vm.network "private_network", ip: "192.168.33.12"
